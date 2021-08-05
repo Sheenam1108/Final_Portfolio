@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       form{
+           font-weight: bold;
+        background-image:url("https://images.unsplash.com/photo-1531346878377-a5be20888e57?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1534&q=80");
+       }
+        body{
+            background-color: white;
+            text-align: center;
+            font-family: sans-serif;
+        }
+        h1
+        {
+            background-color: lightgray;
+      color:black;
+      font-weight: bold;
+      font-family: sans-serif;
+      text-align: center;
+        }
+        label{
+            color:black; 
+        }
+        #button1 {
+  background-color: #2196f3;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+        </style>
+        <script>
+function validateForm() {
+  let x = document.forms["myForm"]["fname"].value;
+  let y= document.forms["myForm"]["email"].value;
+  let z= document.forms["myForm"]["password"].value;
+  let a=document.myForm.num1.value;
+  if (x == "") {
+    alert("Name must be filled out");
+    return false;
+  }
+  if (a == "" || a==null) {
+    alert("Number must be filled out");
+    return false;
+  }
+  if (y == "") {
+    alert("Email must be filled out");
+    return false;
+  }
+  if (z == "") {
+    alert("Password must be filled out");
+    return false;
+  }
+ return (alert(fname1.value));
+}
+        </script>
+</head>
+<body>
+    <p id="demo"></p>
+    <center><h1>Contact me</h1></center>
+    <form name="myForm" action="/action_page.php" onsubmit="return validateForm()" method="post">
+      <br><br>
+        <label for="name">Name:</label>
+        <input type="text" name="fname" id="fname1"><br><br>
+        <label for="gender">Gender :
+        <input type="radio" name="fav" id="" required>Male
+            <input type="radio" name="fav" id="">female</label><br><br>
+        <label for="phone">Phone:</label>
+        <input type="number" id="num1"><br><br><br>
+        <label for="mail">Email :</label>
+        <input type="email" name="email" id=""><br><br><br>
+        <label for="Password">Password :</label>
+        <input type="password" name="password"><br><br><br>
+        <label for="Country">Country :</label>
+        <select>
+            <option value="1">India</option>
+            <option value="2">Others</option>
+        </select><br><br><br>
+        Address:<textarea name="message" id="" cols="30" rows="5"></textarea>
+        <br><br>
+        <label for="vol">Rate:</label>
+  <input type="range" id="vol" name="vol" min="1" max="100"><br><br>
+  <label for="">Resume :</label>
+        <input type="file" name="" accept=".pdf,.word" id="">
+        <br><br>
+        <input type="submit" id="button1">
+    </form>
+    </body>
